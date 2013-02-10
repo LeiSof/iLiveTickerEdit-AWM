@@ -1,0 +1,131 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<title></title> 
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0-beta.1/jquery.mobile-1.3.0-beta.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.0-beta.1/jquery.mobile-1.3.0-beta.1.min.js"></script>
+	<script src="quickButton.js"></script>
+	<script type="text/javascript" language="JavaScript">
+		var spieID=0;
+		var spielminuteID=0;
+	</script>
+	
+</head>
+
+<body onload="hideAll()">
+
+<!--- Spiel.... ------------------------------------------------------------------------>
+<p>Spiel</p>
+<select id="spiel" onchange="checkThem('spielWahl',spiel.value)">
+<option value="0">...bitte wählen</option>
+<option value="60">Knaben ECP vs. Blah</option>
+</select>
+
+<!--- Spielzeit ------------------------------------------------------------------------>
+<div id="spielminuteWahlBox">
+<p>Spielzeit wählen</p>
+<select id="spielminute" onchange="checkThem('spielminuteWahl',spielminute.value)">
+<option value="X">...bitte wählen</option>
+<optgroup label="Allgemein">
+<option value="96">Vor dem Spiel</option>
+<option value="97">1. Drittelpause</option>
+<option value="98">2. Drittelpause</option>
+<option value="99">Nach dem Spiel</option>
+<option value="93">1. Drittel (ohne Spielminute)</option>
+<option value="94">2. Drittel (ohne Spielminute)</option>
+<option value="95">3. Drittel (ohne Spielminute)</option>
+</optgroup>
+<optgroup label="Spielminute">
+<option value="1">1. Spielminute</option>
+<option value="2">2. Spielminute</option>
+<option value="3">3. Spielminute</option>
+<option value="60">60. Spielminute</option>
+</select>
+</div>
+
+<!--- QuickActionWahl ------------------------------------------------------------------->
+<div id="quickActionWahlBox">
+<p>Sofort Action wählen (keine Angabe von Spielzeit notwendig)</p>
+<select id="quickAction" onchange="checkThem('quickActionWahl',quickAction.value)">
+	<option value="0">Spielbeginn</option>
+	<option value="15">Spielbeginn</option>
+	<option value="24">Drittelbeginn (nach Pause)</option>
+	<option value="13">1. Drittel - letze Spielminute</option>
+	<option value="13">2. Drittel - letze Spielminute</option>
+	<option value="14">3. Drittel - letzten 2 Spielminuten</option>
+	<option value="16">Drittelende</option>
+	<option value="25">Spielende</option>
+</select>
+</div>
+
+<!--- ActionWahl ----------------------------------------------------------------------->
+<div id="actionWahlBox">
+<p>Action wählen</p>
+<select id="action" onchange="checkThem('action',action.value)">
+<option value="X">...bitte wählen</option>
+<optgroup label="Allgemeine Infos">
+	<option value="1">Hinweis / Info</option>
+</optgroup>
+<optgroup label="Tor">
+	<?php if ($heimspiel==0) { ?>
+		<option value="2">Tor Heimmannschaft</option>
+		<option value="3">Tor EC-Pfaffenhofen</option>	
+	<? } else { ?>
+		<option value="2">Tor EC Pfaffenhofen</option>
+		<option value="3">Tor Gastmannschaft</option>				
+	<? } ?>
+</optgroup>
+<optgroup label="Strafen">
+	<option value="4">2 Min. gegen...</option>
+	<option value="5">2 Min. gegen beide Mannschaften</option>
+	<option value="6">2 + 2 Min. gegen...</option>
+	<option value="7">2 + 10 Min. gegen...</option>
+	<option value="8">5 Min. + SpD gegen...</option>
+	<option value="9">10 Minuten gegen...</option>
+	<option value="10">Spieldauerdis. gegen...</option>
+	<option value="26">Matchtstrafe</option>
+	<option value="11">sonstige Strafe gegen...</option>
+</optgroup>
+<optgroup label="Stafenende">
+	<option value="12">... wieder komplett</option>
+	<option value="27">... mit 4 Mann auf dem Eis.</option>
+	<option value="28">Beide Mannschaften wieder komplett.</option>
+</optgroup>
+<optgroup label="Spielverlauf">
+	<option value="15">Spielbeginn</option>
+	<option value="24">Drittelbeginn (nach Pause)</option>
+	<option value="13">Letze Spielmin. im 1./2.Drittel</option>
+	<option value="14">Letzten 2 Min. im 3. Drittel</option>
+	<option value="16">Drittelende</option>
+	<option value="25">Spielende</option>
+</optgroup>
+<optgroup label="Information">
+	<option value="17">Auszeit für...</option>
+	<option value="23">Torwartwechsel bei...</option>
+	<option value="18">Verletzter Spieler</option>
+	<option value="19">Spielzeit Info</option>
+</optgroup>
+<optgroup label="Ergebnisdienst">
+	<option value="20">1. Drittelergebnis</option>
+	<option value="21">2. Drittelergebnis</option>
+	<option value="22">Spielergebnis</option>
+</optgroup>
+</select>
+</div>
+
+<div id="mannschaftWahlBox">
+<p>Mannschaft</p>
+<select id="mannschaft" onchange="checkThem('mannschaftWahl',mannschaft.value)">
+	<option value="" >...bitte wählen</option>
+	<option value="heim">Heimmannschaft</option>
+	<option value="gast">EC Pfaffenhofen</option>	
+ </select>
+</div>
+
+
+</body>
