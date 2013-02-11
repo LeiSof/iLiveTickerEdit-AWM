@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns     = "http://www.w3.org/ns/widgets"
 xmlns:gap = "http://phonegap.com/ns/1.0"
-id        = "com.leisof.iliveticker"
-version   = "1.2.11">
+id        = "com.leisof.ilivetickeredit"
+version   = "0.1.11">
 <!--- Vergiss nicht die Version in der App anzupassen! /> -->
 
-	<name>iLiveTicker ECP Nachwuchs AWM</name>
-	<description>Mit dieser App können Sie den Liveticker der EC Pfaffenhofen Nachwuchsmannschaften verfolgen.</description>
+	<name>iLiveTicker Edit</name>
+	<description>Dies ist der Editor für den LiveTicker.</description>
 	<author href="http://leisof.com" email="support@leisof.com">LeiSofTeam</author>
 	<feature name="http://api.phonegap.com/1.0/device" />
 	<preference name="phonegap-version" value="2.2.0" />
