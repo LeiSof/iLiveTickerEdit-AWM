@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+xmlns:gap = "http://phonegap.com/ns/1.0"
+id        = "com.leisof.iliveticker"
+version   = "1.2.11">
+<!--- Vergiss nicht die Version in der App anzupassen! /> -->
+
+	<name>iLiveTicker ECP Nachwuchs AWM</name>
+	<description>Mit dieser App können Sie den Liveticker der EC Pfaffenhofen Nachwuchsmannschaften verfolgen.</description>
+	<author href="http://leisof.com" email="support@leisof.com">LeiSofTeam</author>
+	<feature name="http://api.phonegap.com/1.0/device" />
+	<preference name="phonegap-version" value="2.2.0" />
+	<preference name="orientation"      value="default" />
+	<preference name="target-device"    value="universal" />
+	<preference name="fullscreen"       value="true" />
+	<icon src="icon.png" />
+	<icon src="res/icon/android/ldpi.png"   gap:platform="android"    gap:density="ldpi" />
+	<icon src="res/icon/android/mdpi.png"   gap:platform="android"    gap:density="mdpi" />
+	<icon src="res/icon/android/hdpi.png"   gap:platform="android"    gap:density="hdpi" />
+	<icon src="res/icon/android/xhdpi.png"  gap:platform="android"    gap:density="xhdpi" />
+	<gap:splash src="res/splash/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
+	<gap:splash src="res/splash/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
+	<gap:splash src="res/splash/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
+	<gap:splash src="res/splash/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+	<icon src="res/icon/windows-phone/icon-42.png"  gap:platform="winphone" />
+	<icon src="res/icon/windows-phone/icon-173.png" gap:platform="winphone"   gap:role="background" />
+	<preference name="permissions" value="none"/>
+	
+</widget>
