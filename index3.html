@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<title></title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0-beta.1/jquery.mobile-1.3.0-beta.1.min.css" />
+		<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.3.0-beta.1/jquery.mobile-1.3.0-beta.1.min.js"></script>
+		<script src="lib/js/setTicker.js"></script>
+	</head>
+
+	<body onload="init()">
+		<!-- Start of first page -->
+		<div data-role="page" id="main" data-title="iLiveTicker Editor App">
+			<div data-role="header">
+				<h1>
+				<div id="header">
+					iLiveTicker Editor App
+				</div></h1>
+			</div><!-- /header -->
+
+			<div data-role="content">
+				<p align="center">
+				</p>
+				<form name="tickerEditor" action="#">
+					<!--- Spielzeit ------------------------------------------------------------------------>
+					<div id="spielminuteWahlBox">
+						<p>
+							Spielzeit wählen
+						</p>
+						<select id="spielminute" onchange="checkThem('spielminuteWahl',spielminute.value)">
+							<option value="0">...bitte wählen</option>
+							<optgroup label="Allgemein">
+								<option value="96">Vor dem Spiel</option>
+								<option value="97">1. Drittelpause</option>
+								<option value="98">2. Drittelpause</option>
+								<option value="99">Nach dem Spiel</option>
+								<option value="93">1. Drittel (ohne Spielminute)</option>
+								<option value="94">2. Drittel (ohne Spielminute)</option>
+								<option value="95">3. Drittel (ohne Spielminute)</option>
+							</optgroup>
+							<optgroup label="Spielminute">
+								<option value="1">1. Spielminute</option>
+								<option value="2">2. Spielminute</option>
+								<option value="3">3. Spielminute</option>
+								<option value="4">4. Spielminute</option>
+								<option value="5">5. Spielminute</option>
+								<option value="6">6. Spielminute</option>
+								<option value="7">7. Spielminute</option>
+								<option value="8">8. Spielminute</option>
+								<option value="9">9. Spielminute</option>
+								<option value="10">10. Spielminute</option>
+								<option value="11">11. Spielminute</option>
+								<option value="12">12. Spielminute</option>
+								<option value="13">13. Spielminute</option>
+								<option value="14">14. Spielminute</option>
+								<option value="15">15. Spielminute</option>
+								<option value="16">16. Spielminute</option>
+								<option value="17">17. Spielminute</option>
+								<option value="18">18. Spielminute</option>
+								<option value="19">19. Spielminute</option>
+								<option value="20">20. Spielminute</option>
+								<option value="21">21. Spielminute</option>
+								<option value="22">22. Spielminute</option>
+								<option value="23">23. Spielminute</option>
+								<option value="24">24. Spielminute</option>
+								<option value="25">25. Spielminute</option>
+								<option value="26">26. Spielminute</option>
+								<option value="27">27. Spielminute</option>
+								<option value="28">28. Spielminute</option>
+								<option value="29">29. Spielminute</option>
+								<option value="30">30. Spielminute</option>
+								<option value="31">31. Spielminute</option>
+								<option value="32">32. Spielminute</option>
+								<option value="33">33. Spielminute</option>
+								<option value="34">34. Spielminute</option>
+								<option value="35">35. Spielminute</option>
+								<option value="36">36. Spielminute</option>
+								<option value="37">37. Spielminute</option>
+								<option value="38">38. Spielminute</option>
+								<option value="39">39. Spielminute</option>
+								<option value="40">40. Spielminute</option>
+								<option value="41">41. Spielminute</option>
+								<option value="42">42. Spielminute</option>
+								<option value="43">43. Spielminute</option>
+								<option value="44">44. Spielminute</option>
+								<option value="45">45. Spielminute</option>
+								<option value="46">46. Spielminute</option>
+								<option value="47">47. Spielminute</option>
+								<option value="48">48. Spielminute</option>
+								<option value="49">49. Spielminute</option>
+								<option value="50">50. Spielminute</option>
+								<option value="51">51. Spielminute</option>
+								<option value="52">52. Spielminute</option>
+								<option value="53">53. Spielminute</option>
+								<option value="54">54. Spielminute</option>
+								<option value="55">55. Spielminute</option>
+								<option value="56">56. Spielminute</option>
+								<option value="57">57. Spielminute</option>
+								<option value="58">58. Spielminute</option>
+								<option value="59">59. Spielminute</option>
+								<option value="60">60. Spielminute</option>
+						</select>
+					</div>
+
+					<!--- QuickActionWahl ------------------------------------------------------------------->
+					<div id="quickActionWahlBox">
+						<p>
+							Sofort Action (keine Angabe von Spielzeit notwendig)
+						</p>
+						<select id="quickAction" onchange="checkThem('quickActionWahl',quickAction.value)">
+							<option value="0">... bitte wählen</option>
+							<optgroup label="Spielverlauf">
+								<option value="11">Spielbeginn</option>
+								<option value="12">1/3 Letze Spielminute</option>
+								<option value="13">1/3 Ende</option>
+								<option value="14">2/3 Drittelbeginn</option>
+								<option value="15">2/3 Letze Spielminute</option>
+								<option value="16">2/3 Ende</option>
+								<option value="17">3/3 Drittelbeginn</option>
+								<option value="18">3/3 Letzen 2 Spielminuten</option>
+								<option value="19">Spielende</option>
+							</optgroup>
+							<optgroup label="Ergebnisdienst">
+								<option value="91">1. Drittelergebnis</option>
+								<option value="92">2. Drittelergebnis</option>
+								<option value="93">Spielergebnis</option>
+							</optgroup>
+						</select>
+					</div>
+
+					<!--- ActionWahl ----------------------------------------------------------------------->
+					<div id="actionWahlBox">
+						<p>
+							Action wählen
+						</p>
+						<select id="action" onchange="checkThem('actionWahl',action.value)">
+							<option value="0">...bitte wählen</option>
+							<optgroup label="Allgemeine Infos">
+								<option value="1">Hinweis / Info</option>
+							</optgroup>
+							<optgroup label="Tor">
+								<?php if ($heimspiel==0) { ?>
+								<option value="21">Tor Heimmannschaft</option>
+								<option value="22">Tor EC-Pfaffenhofen</option>
+								<? } else { ?>
+								<option value="21">Tor EC Pfaffenhofen</option>
+								<option value="22">Tor Gastmannschaft</option>
+								<? } ?>
+							</optgroup>
+							<optgroup label="Spielaction">
+								<option value="30">Icing Heim</option>
+								<option value="31">Icing Gast</option>
+								<option value="32">Abseits Heim</option>
+								<option value="33">Abseits Gast</option>
+							</optgroup>
+							<optgroup label="Strafen">
+								<option value="41">2 Minuten</option>
+								<option value="42">2 Min (beide Mannschaften)</option>
+								<option value="43">2 + 2 Minuten</option>
+								<option value="44">2 + 10 Minuten</option>
+								<option value="46">5 Min. + SpD</option>
+								<option value="46">10 Minuten</option>
+								<option value="47">Spieldauerdiszipinalstrafe</option>
+								<option value="48">Matchtstrafe</option>
+								<option value="49">sonstige Strafe</option>
+							</optgroup>
+							<optgroup label="Stafenende">
+								<option value="51">... wieder komplett</option>
+								<option value="52">... mit 4 Mann auf dem Eis.</option>
+								<option value="53">Beide Mannschaften wieder komplett.</option>
+							</optgroup>
+							<optgroup label="Spielverlauf">
+								<option value="11">Spielbeginn</option>
+								<option value="12">1/3 Letze Spielminute</option>
+								<option value="13">1/3 Ende</option>
+								<option value="14">2/3 Drittelbeginn</option>
+								<option value="15">2/3 Letze Spielminute</option>
+								<option value="16">2/3 Ende</option>
+								<option value="17">3/3 Drittelbeginn</option>
+								<option value="18">3/3 Letzen 2 Spielminuten</option>
+								<option value="19">Spielende</option>
+							</optgroup>
+							<optgroup label="Information">
+								<option value="61">Auszeit für...</option>
+								<option value="62">Torwartwechsel bei...</option>
+								<option value="63">Verletzter Spieler</option>
+								<option value="64">Spielzeit Info</option>
+							</optgroup>
+						</select>
+					</div>
+
+					<div id="mannschaftWahlBox">
+						<p>
+							Mannschaft
+						</p>
+						<select id="mannschaft" onchange="checkThem('mannschaftWahl',mannschaft.value)">
+							<option value="0" >...bitte wählen</option>
+							<option value="heim">Heimmannschaft</option>
+							<option value="gast">EC Pfaffenhofen</option>
+						</select>
+					</div>
+
+					<div id="torWahlBox">
+						<p>
+							Torschütze
+						</p>
+						<select id="torSpieler1" onchange="checkThem('mannschaftWahl',mannschaft.value)">
+
+						</select>
+						<p>
+							Assist 1
+						</p>
+						<select id="torSpieler2" onchange="checkThem('mannschaftWahl',mannschaft.value)"></select>
+						<p>
+							Assist 2
+						</p>
+						<select id="torSpieler3" onchange="checkThem('mannschaftWahl',mannschaft.value)"></select>
+						<p>
+							Unterzahl / Überzahl
+						</p>
+						<select id="ueberzahl" onchange="checkThem('mannschaftWahl',mannschaft.value)">
+							<option value="0" >...bitte wählen</option>
+							<option value="EQ">kein Überzahl / Unterzahl (EQ)</option>
+							<option value="PP1">Überzahl einfach (PP1)</option>
+							<option value="PP2">Überzahl doppelt (PP2)</option>
+							<option value="UZ">Unterzahl</option>
+						</select>
+						<p>
+							Gegnerische Mannschaft dadurch
+						</p>
+						<select id="komplett" onchange="checkThem('mannschaftWahl',mannschaft.value)">
+							<option value="0" >...bitte wählen</option>
+							<option value="voll">vollzählig auf dem Eis.</option>
+							<option value="mit4mann">mit 4 Mann auf dem Eis.</option>
+							<option value="weiter4mann">weiterhin mit 4 Mann auf dem Eis.</option>
+							<option value="weiter3mann">weiterhin mit 3 Mann auf dem Eis.</option>
+							<option value="angezeigteStrafe">Angezeigte Strafe aufgehoben</option>
+						</select>
+					</div>
+
+					<div id="strafeWahlBox">
+						<p>
+							Spieler
+						</p>
+						<select id="strafeSpieler" onchange="checkThem('mannschaftWahl',mannschaft.value)">
+							<option value="0" >...bitte wählen</option>
+							<option value="101">Hans Dampf</option>
+							<option value="102">Klaus Maus</option>
+							<option value="103">Darth Vadder</option>
+						</select>
+						<p>
+							Strafe
+						</p>
+						<select id="strafe" onchange="checkThem('mannschaftWahl',mannschaft.value)">
+							<option value="0" >...bitte wählen</option>
+							<option value="01">Bankstrafe</option>
+							<option value="02">Bandencheck</option>
+							<option value="03">Behinderung</option>
+							<option value="04">Beinstellen</option>
+							<option value="05">Disziplinarstrafe</option>
+							<option value="06">Ellenbogencheck</option>
+							<option value="07">Fausschlag</option>
+							<option value="08">Haken</option>
+							<option value="09">Halten</option>
+							<option value="10">Hoher Stock</option>
+							<option value="11">Kniecheck</option>
+							<option value="12">Matchstrafe</option>
+							<option value="13">Reklamieren</option>
+							<option value="14">Spieldauerdisziplinarstrafe</option>
+							<option value="15">Check von hinten</option>
+							<option value="16">SpielverzÃ¶gerung</option>
+							<option value="17">Stockcheck</option>
+							<option value="18">Stockendstoss</option>
+							<option value="19">Stockschlag</option>
+							<option value="20">Stockstich</option>
+							<option value="21">unkorr. KÃ¶rperangriff</option>
+							<option value="22">unkorr. Wechsel</option>
+							<option value="23">unnÃ¶tige HÃ¤rte</option>
+							<option value="24">Check gegen Kopf und Nacken</option>
+							<option value="25">sonstiges</option>
+							<option value="99">angezeigte Strafe durch Tor aufgehoben</option>
+						</select>
+						<p>
+							Anzahl der Spieler auf dem Eis
+						</p>
+						<select id="spielerAnzahl" onchange="checkThem('mannschaftWahl',spielerAnzahl.value)">
+							<option value="0" >...bitte wählen</option>
+							<option value="54">5 gegen 4</option>
+							<option value="45">4 gegen 5</option>
+							<option value="44">4 gegen 4</option>
+							<option value="53">5 gegen 3</option>
+							<option value="35">3 gegen 5</option>
+							<option value="43">4 gegen 3</option>
+							<option value="34">3 gegen 4</option>
+							<option value="33">3 gegen 3</option>
+						</select>
+					</div>
+
+					<div id="torwartwechselWahlBox">
+						<p>
+							Neuer Torwart
+						</p>
+						<select id="torwartSpieler1" onchange="checkThem('mannschaftWahl',mannschaft.value)">
+							<option value="0" >...bitte wählen</option>
+							<option value="101">Hans Dampf</option>
+							<option value="102">Klaus Maus</option>
+							<option value="103">Darth Vadder</option>
+						</select>
+						<p>
+							Alter Torwart
+						</p>
+						<select id="torwartSpieler2" onchange="checkThem('mannschaftWahl',mannschaft.value)">
+							<option value="0" >...bitte wählen</option>
+							<option value="101">Hans Dampf</option>
+							<option value="102">Klaus Maus</option>
+							<option value="103">Darth Vadder</option>
+						</select>
+					</div>
+
+					<div id="ergebnisWahlBox">
+						<p>
+							Aktueller Spielstand / Endstand
+						</p>
+						<p>
+							Tore für Heimmannschaft
+						</p>
+						<select id="heimTore">
+							<option value="0" >0</option>
+							<option value="1" >1</option>
+							<option value="2" >2</option>
+							<option value="3" >3</option>
+							<option value="4" >4</option>
+							<option value="5" >5</option>
+							<option value="6" >6</option>
+							<option value="7" >7</option>
+							<option value="8" >8</option>
+							<option value="9" >9</option>
+							<option value="10" >10</option>
+							<option value="11" >11</option>
+							<option value="12" >12</option>
+							<option value="13" >13</option>
+							<option value="14" >14</option>
+							<option value="15" >15</option>
+							<option value="16" >16</option>
+							<option value="17" >17</option>
+							<option value="18" >18</option>
+							<option value="19" >19</option>
+							<option value="20" >20</option>
+							<option value="21" >12</option>
+							<option value="22" >22</option>
+							<option value="23" >23</option>
+							<option value="24" >24</option>
+						</select>
+						<p>
+							Tore für Gastmannschaft
+						</p>
+						<select id="gastTore">
+							<option value="0" >0</option>
+							<option value="1" >1</option>
+							<option value="2" >2</option>
+							<option value="3" >3</option>
+							<option value="4" >4</option>
+							<option value="5" >5</option>
+							<option value="6" >6</option>
+							<option value="7" >7</option>
+							<option value="8" >8</option>
+							<option value="9" >9</option>
+							<option value="10" >10</option>
+							<option value="11" >11</option>
+							<option value="12" >12</option>
+							<option value="13" >13</option>
+							<option value="14" >14</option>
+							<option value="15" >15</option>
+							<option value="16" >16</option>
+							<option value="17" >17</option>
+							<option value="18" >18</option>
+							<option value="19" >19</option>
+							<option value="20" >20</option>
+							<option value="21" >12</option>
+							<option value="22" >22</option>
+							<option value="23" >23</option>
+							<option value="24" >24</option>
+						</select>
+					</div>
+
+					<div id="textBox">
+						<p id="texteingabeAufforderung"></p>
+						<textarea id="text" onkeyup="vorschauAktualisieren()"></textarea>
+					</div>
+
+					<div class="ui-body ui-body-b">
+						<h4>Vorschau:</h4>
+						<div id="vorschau"></div>
+					</div>
+
+					<a href="#" id="absenden" onclick="absenden()" data-role="button">Absenden</a>
+				</form>
+			</div><!-- /content -->
+
+			<div data-role="footer">
+				<h4>Build with PhoneGap&trade;</h4>
+			</div><!-- /footer -->
+		</div><!-- /page -->
+	</body>
+</html>
+
