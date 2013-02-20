@@ -16,6 +16,7 @@
 		<!-- Start of first page -->
 		<div data-role="page" id="main" data-title="iLiveTicker Editor App">
 			<div data-role="header">
+				<a href="index.html" data-icon="back" data-ajax="false">Zurück</a>
 				<h1>
 				<div id="header">
 					iLiveTicker Editor App
@@ -34,10 +35,7 @@
 				</p>
 				<form name="spielAuswahl" action="index3.html" data-ajax="false" onsubmit="return spielAuswahlPruefen()">
 					<div data-role="fieldcontain">
-						<select name="spielID" id="spiel">
-						<option value="0">bitte wählen</option>
-						<option value="9999">Testspiel vs. Gut und Böse (zum Testen vom Ticker)</option>
-						</select>
+						<select name="spielID" id="spiel"></select>
 					</div>
 					<div data-role="fieldcontain">
 						<button type="submit" data-theme="b" name="submit" value="submit-value">

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<title></title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0-beta.1/jquery.mobile-1.3.0-beta.1.min.css" />
+		<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.3.0-beta.1/jquery.mobile-1.3.0-beta.1.min.js"></script>
+		<script src="lib/js/setSpielEintrag.js"></script>
+	</head>
+
+	<body onload="init()">
+		<!-- Start of first page -->
+		<div data-role="page" id="main" data-title="iLiveTicker Editor App">
+			<div data-role="header">
+
+				<h1>
+				<div id="header">
+					iLiveTicker Editor App
+				</div></h1>
+				<div class="ui-body ui-body-e">
+					<div id="spielDaten" align="center"></div>
+				</div>
+				<div id="ticker" data-role="navbar">
+					<ul>
+						<li>
+							<a href="#" data-ajax="false">Liste anzeigen</a>
+						</li>
+						<!---<li><a href="#">Tore</a></li>
+						<li><a href="#">Strafen</a></li>--->
+						<li>
+							<a href="menu.html" data-ajax="false">Abbrechen</a>
+						</li>
+					</ul>
+				</div>
+			</div><!-- /header -->
+
+			<div data-role="content">
+
+				<p align="center"></p>
+				<form name="spielEditor" action="#">
+					<div id="mannschaftWahlBox">
+						<p>
+							Mannschaft wählen
+						</p>
+						<select id="mannschaft" onchange="">
+						</select>
+					</div>
+					<div id="spieltagWahlBox">
+						<p>
+							Spieltag wählen
+						</p>
+						<select id="spieltag" onchange="">
+							<option value="0" ></option>
+							<option value="97" >Freundschaftsspiel</option>
+							<option value="98" >Punktturnier</option>
+							<option value="99" >Freundschaftsturnier</option>
+							<option value="1" >1. Spieltag</option>
+							<option value="2" >2. Spieltag</option>
+							<option value="3" >3. Spieltag</option>
+							<option value="4" >4. Spieltag</option>
+							<option value="5" >5. Spieltag</option>
+							<option value="6" >6. Spieltag</option>
+							<option value="7" >7. Spieltag</option>
+							<option value="8" >8. Spieltag</option>
+							<option value="9" >9. Spieltag</option>
+							<option value="10" >10. Spieltag</option>
+							<option value="11" >11. Spieltag</option>
+							<option value="12" >12. Spieltag</option>
+							<option value="13" >13. Spieltag</option>
+							<option value="14" >14. Spieltag</option>
+							<option value="15" >15. Spieltag</option>
+							<option value="16" >16. Spieltag</option>
+							<option value="17" >17. Spieltag</option>
+							<option value="18" >18. Spieltag</option>
+							<option value="19" >19. Spieltag</option>
+							<option value="20" >20. Spieltag</option>
+							<option value="21" >21. Spieltag</option>
+							<option value="22" >22. Spieltag</option>
+							<option value="23" >23. Spieltag</option>
+							<option value="24" >24. Spieltag</option>
+							<option value="25" >25. Spieltag</option>
+							<option value="26" >26. Spieltag</option>
+						</select>
+					</div>
+					<div data-role="fieldcontain">
+						<label for="datum">Datum (8-stellig) z.B. 12.12.2010</label>
+						<input type="text" name="datum" id="datum" value=""  />
+					</div>
+					<div data-role="fieldcontain">
+						<label for="uhrzeit">Uhrzeit (ohne Uhr) z.B. 16:30</label>
+						<input type="text" name="uhrzeit" id="uhrzeit" value=""  />
+					</div>
+					<label for="heimspiel">Heimspiel</label>
+					<select name="heimspiel" id="heimspiel" data-role="slider">
+						<option value="0">Ja</option>
+						<option value="1">Nein</option>
+					</select>
+					<div id="gegnerWahlBox">
+						<p>
+							Gegner wählen
+						</p>
+						<select id="gegner" onchange=""></select>
+					</div>
+					<a href="#" id="absenden" onclick="absenden()" data-role="button">Spiel eintragen</a>
+				</form>
+			</div><!-- /content -->
+
+			<div data-role="footer">
+				<h4>Build with PhoneGap&trade;</h4>
+			</div><!-- /footer -->
+		</div><!-- /page -->
+	</body>
+</html>
+
