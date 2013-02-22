@@ -6,9 +6,9 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0-beta.1/jquery.mobile-1.3.0-beta.1.min.css" />
-		<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-		<script src="http://code.jquery.com/mobile/1.3.0-beta.1/jquery.mobile-1.3.0-beta.1.min.js"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" />
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
 		<script src="lib/js/setTicker.js"></script>
 	</head>
 
@@ -16,25 +16,13 @@
 		<!-- Start of first page -->
 		<div data-role="page" id="main" data-title="iLiveTicker Editor App">
 			<div data-role="header">
-				<a href="menu.html" data-icon="back" data-ajax="false">Menu</a>
+				<a href="#left-panel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false">Menu</a>
 				<h1>
 				<div id="header">
 					iLiveTicker Editor App
 				</div></h1>
 				<div class="ui-body ui-body-e">
 					<div id="spielDaten" align="center"></div>
-				</div>
-				<div id="ticker" data-role="navbar">
-					<ul>
-						<li>
-							<a href="index2.html" data-ajax="false">Spielwahl</a>
-						</li>
-						<!---<li><a href="#">Tore</a></li>
-						<li><a href="#">Strafen</a></li>--->
-						<li>
-							<a href="#" data-ajax="false">Letze Löschen</a>
-						</li>
-					</ul>
 				</div>
 			</div><!-- /header -->
 
@@ -400,6 +388,50 @@
 			<div data-role="footer">
 				<h4>Build with PhoneGap&trade;</h4>
 			</div><!-- /footer -->
+			<div data-role="panel" id="left-panel" data-theme="c">
+				<ul data-role="listview" data-theme="d">
+					<li data-icon="delete">
+						<a href="#" data-rel="close">Scließen</a>
+					</li>
+					<li data-role="list-divider">
+						Menu
+					</li>
+					<li data-icon="back">
+						<a href="index2.html" data-rel="back">Spielwahl</a>
+					</li>
+					<li data-icon="back">
+						<a href="" data-rel="back">Letze Löschen</a>
+					</li>
+					<li data-icon="back">
+						<a href="index2.html" data-rel="back">Hauptmenü</a>
+					</li>
+					<li data-icon="back">
+						<a href="index.html" data-rel="back">Logout</a>
+					</li>
+				</ul>
+			</div><!-- /panel -->
+			<div data-role="panel" id="right-panel" data-display="overlay" data-position="right" data-theme="c">
+				<ul data-role="listview" data-theme="d" data-icon="false">
+					<li data-icon="delete">
+						<a href="#" data-rel="close">Close</a>
+					</li>
+					<li data-role="list-divider">
+						Share this page
+					</li>
+					<li>
+						<a href="#">Twitter</a>
+					</li>
+					<li>
+						<a href="#">Facebook</a>
+					</li>
+					<li>
+						<a href="#">Google +</a>
+					</li>
+					<li>
+						<a href="#">Mail</a>
+					</li>
+				</ul>
+			</div><!-- /panel -->
 		</div><!-- /page -->
 	</body>
 </html>
