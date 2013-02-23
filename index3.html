@@ -199,19 +199,19 @@
 						<p>
 							Torschütze
 						</p>
-						<select id="torSpieler1" onchange="checkThem('mannschaftWahl',mannschaft.value)"></select>
+						<select id="torSpieler1" onchange="checkThem('torSpieler1',torSpieler1.value)"></select>
 						<p>
 							Assist 1
 						</p>
-						<select id="torSpieler2" onchange="checkThem('mannschaftWahl',mannschaft.value)"></select>
+						<select id="torSpieler2" onchange="checkThem('torSpieler2',torSpieler2.value)"></select>
 						<p>
 							Assist 2
 						</p>
-						<select id="torSpieler3" onchange="checkThem('mannschaftWahl',mannschaft.value)"></select>
+						<select id="torSpieler3" onchange="checkThem('torSpieler3',torSpieler3.value)"></select>
 						<p>
 							Unterzahl / Überzahl
 						</p>
-						<select id="ueberzahl" onchange="checkThem('mannschaftWahl',mannschaft.value)">
+						<select id="ueberzahl" onchange="checkThem('uerberzahlWahl',ueberzahl.value)">
 							<option value="0" >...bitte wählen</option>
 							<option value="EQ">kein Überzahl / Unterzahl (EQ)</option>
 							<option value="PP1">Überzahl einfach (PP1)</option>
@@ -221,7 +221,7 @@
 						<p>
 							Gegnerische Mannschaft dadurch
 						</p>
-						<select id="komplett" onchange="checkThem('mannschaftWahl',mannschaft.value)">
+						<select id="komplett" onchange="checkThem('komplettWahl',komplett.value)">
 							<option value="0" >...bitte wählen</option>
 							<option value="voll">vollzählig auf dem Eis.</option>
 							<option value="mit4mann">mit 4 Mann auf dem Eis.</option>
@@ -235,11 +235,11 @@
 						<p>
 							Spieler
 						</p>
-						<select id="strafeSpieler" onchange="checkThem('mannschaftWahl',mannschaft.value)"></select>
+						<select id="strafeSpieler" onchange="checkThem('strafeSpielerWahl',strafeSpieler.value)"></select>
 						<p>
 							Strafe
 						</p>
-						<select id="strafeGrund" onchange="checkThem('mannschaftWahl',mannschaft.value)">
+						<select id="strafeGrund" onchange="checkThem('strafeGrundWahl',strafeGrund.value)">
 							<option value="0" >...bitte wählen</option>
 							<option value="01">Bankstrafe</option>
 							<option value="02">Bandencheck</option>
@@ -271,7 +271,7 @@
 						<p>
 							Anzahl der Spieler auf dem Eis
 						</p>
-						<select id="spielerAnzahl" onchange="checkThem('mannschaftWahl',spielerAnzahl.value)">
+						<select id="spielerAnzahl" onchange="checkThem('spielerAnzahlWahl',spielerAnzahl.value)">
 							<option value="0" >...bitte wählen</option>
 							<option value="54">5 gegen 4</option>
 							<option value="45">4 gegen 5</option>
@@ -288,7 +288,7 @@
 						<p>
 							Neuer Torwart
 						</p>
-						<select id="torwartSpieler1" onchange="checkThem('mannschaftWahl',mannschaft.value)">
+						<select id="torwartSpieler1" onchange="checkThem('torwartSpieler1tWahl',torwartSpieler1.value)">
 							<option value="0" >...bitte wählen</option>
 							<option value="101">Hans Dampf</option>
 							<option value="102">Klaus Maus</option>
@@ -297,7 +297,7 @@
 						<p>
 							Alter Torwart
 						</p>
-						<select id="torwartSpieler2" onchange="checkThem('mannschaftWahl',mannschaft.value)">
+						<select id="torwartSpieler2" onchange="checkThem('torwartSpieler2Wahl',torwartSpieler2.value)">
 							<option value="0" >...bitte wählen</option>
 							<option value="101">Hans Dampf</option>
 							<option value="102">Klaus Maus</option>
@@ -312,7 +312,7 @@
 						<p>
 							Tore für Heimmannschaft
 						</p>
-						<select id="heimTore">
+						<select id="heimTore" onchange="checkThem('heimToreWahl',heimTore.value)">
 							<option value="0" >0</option>
 							<option value="1" >1</option>
 							<option value="2" >2</option>
@@ -342,7 +342,7 @@
 						<p>
 							Tore für Gastmannschaft
 						</p>
-						<select id="gastTore">
+						<select id="gastTore" onchange="checkThem('gastToreWahl',gastTore.value)">
 							<option value="0" >0</option>
 							<option value="1" >1</option>
 							<option value="2" >2</option>
