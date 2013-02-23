@@ -137,7 +137,7 @@
 					</div>
 
 					<!--- ActionWahl ----------------------------------------------------------------------->
-					<div id="actionWahlBox">
+					<div id="actionWahlBox" style="display:none">
 						<p>
 							Action wählen
 						</p>
@@ -189,14 +189,14 @@
 						</select>
 					</div>
 
-					<div id="mannschaftWahlBox">
+					<div id="mannschaftWahlBox" style="display:none">
 						<p>
 							Mannschaft
 						</p>
 						<select id="mannschaft" onchange="checkThem('mannschaftWahl',mannschaft.value)"></select>
 					</div>
 
-					<div id="torWahlBox">
+					<div id="torWahlBox" style="display:none">
 						<p>
 							Torschütze
 						</p>
@@ -232,7 +232,7 @@
 						</select>
 					</div>
 
-					<div id="strafeWahlBox">
+					<div id="strafeWahlBox" style="display:none">
 						<p>
 							Spieler
 						</p>
@@ -285,7 +285,7 @@
 						</select>
 					</div>
 
-					<div id="torwartwechselWahlBox">
+					<div id="torwartwechselWahlBox" style="display:none">
 						<p>
 							Neuer Torwart
 						</p>
@@ -306,7 +306,7 @@
 						</select>
 					</div>
 
-					<div id="ergebnisWahlBox">
+					<div id="ergebnisWahlBox" style="display:none">
 						<p>
 							Aktueller Spielstand / Endstand
 						</p>
@@ -372,16 +372,16 @@
 						</select>
 					</div>
 
-					<div id="textBox">
+					<div id="textBox" style="display:none">
 						<p id="texteingabeAufforderung"></p>
 						<textarea id="text" name="text" onkeyup="absenden(0)"></textarea>
 					</div>
 
 					<div class="ui-body ui-body-b">
 						<h4>Vorschau:</h4>
-						<div id="vorschau"></div>
+						<div id="vorschau" style="display:none"></div>
 					</div>
-					<a href="#" id="absenden" onclick="absenden(1)" data-role="button">Absenden</a>
+					<a href="#" id="absenden" onclick="absenden(1)" data-role="button" style="display:none">Absenden</a>
 				</form>
 			</div><!-- /content -->
 
