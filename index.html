@@ -14,16 +14,16 @@
 	</head>
 
 	<body>
-		<div data-role="page" id="main" data-title="iLiveTicker Editor App">
+		<div data-role="page" id="main" data-title="iLT Editor">
 			<div data-role="header">
 				<h1>
 				<div id="header">
-					iLiveTicker Editor App Demo
+					iLT Editor
 				</div></h1>
 			</div><!-- /header -->
 
 			<div data-role="content">
-				<form name="tickerEditor" action="menu.html" method="post" data-ajax="false" onsubmit="return check()">
+				<form name="tickerEditor" action="#">
 					<div data-role="fieldcontain">
 						<label for="benutzerkennung">Benutzerkennung:</label>
 						<input type="text" name="benutzerkennung" id="benutzerkennung" value=""  />
@@ -33,9 +33,7 @@
 						<input type="password" name="passwort" id="passwort" value=""  />
 					</div>
 					<div data-role="fieldcontain">
-						<button type="submit" data-theme="b" name="submit" value="submit-value">
-							Anmelden
-						</button>
+					<a href="#" id="anmelden" onclick="absenden()" data-role="button">Anmelden</a>
 					</div>
 					<p id="deviceProperties">Loading device properties...</p>
 				</form>
