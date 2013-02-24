@@ -26,12 +26,24 @@
 			<div data-role="content">
 				<p align="center"></p>
 				<div data-role="controlgroup">
-					<a href="index2.html" data-role="button" data-ajax="false">Ticker schreiben</a>
-					<a href="spieleintrag.html" data-role="button" data-ajax="false">Spiel erfassen</a>
-					<a href="#" data-role="button" data-ajax="false">Spiele auflisten</a>
-					<a href="spielwahl.html" data-role="button" data-ajax="false">Spiel bearbeiten</a>
-					<a href="sofortmeldung.html" data-role="button" data-ajax="false">Sofortmeldung verschicken</a>
-					<a href="einstellungen.html" data-role="button" data-ajax="false" data-icon="gear">Einstellungen</a>
+					<form>
+						<div data-role="fieldcontain">
+							<label for="flip-6">Vorschau anzeigen:</label>
+							<select name="flip-6" id="flip-6" data-role="slider">
+								<option value="on">An</option>
+								<option value="off">Aus</option>
+							</select>
+						</div>
+						<div data-role="fieldcontain">
+							<label for="flip-6">Livetickertabelle abrufen:</label>
+							<select name="flip-6" id="flip-6" data-role="slider">
+								<option value="on">An</option>
+								<option value="off">Aus</option>
+							</select>
+						</div>
+						<h4>Wenn Du eine langsame Internetverbindung zum Tickern hast, 
+							solltest Du die Optionen selektiv ausschalten.</h4>
+					</form>
 				</div>
 			</div><!-- /content -->
 
